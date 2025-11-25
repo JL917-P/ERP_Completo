@@ -1,6 +1,6 @@
 console.log("Cargando módulos ERP...");
 
-// Lista de los módulos según tu carpeta real
+// Lista de módulos según tu carpeta real
 const modules = [
     { id: "fumigacion", html: "modules/fumigacion_header.html", js: "modules/fumigacion.js" },
     { id: "calidad", html: "modules/calidad_header.html", js: "modules/calidad.js" },
@@ -16,20 +16,16 @@ modules.forEach(m => {
     const container = document.getElementById(`${m.id}-container`);
     if (!container) return;
 
-    // Si el módulo tiene HTML, cargarlo
     if (m.html) {
         fetch(m.html)
             .then(r => r.text())
-            .then(html => {
-                container.innerHTML = html;
-            })
+            .then(html => container.innerHTML = html)
             .catch(err => {
                 container.innerHTML = "Error cargando módulo HTML…";
                 console.error("Error HTML", m.id, err);
             });
     }
 
-    // Cargar el JS correspondiente
     if (m.js) {
         const script = document.createElement('script');
         script.src = m.js;
