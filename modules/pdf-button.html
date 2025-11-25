@@ -1,0 +1,7 @@
+
+<!-- Botón para generar PDF -->
+<button id="btnPDF" class="btn-pdf">Generar PDF</button>
+<script type="module">
+import { generarPDF } from './modules/pdf.js';
+document.getElementById("btnPDF").onclick = generarPDF;
+</script>
