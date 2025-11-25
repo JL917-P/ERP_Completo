@@ -43,7 +43,7 @@
 
   // --- IndexedDB ---
   const DB_NAME = 'erp_induamerica';
-  const DB_VER  = 1;
+  const DB_VER  = 2;   // <<---- VERSIÓN ACTUALIZADA (FIX)
   let db;
   let editId = null;
 
