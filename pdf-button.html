@@ -1,0 +1,7 @@
+
+<!-- Botón para generar PDF (puede ir en Fumigación, Calidad o navbar) -->
+<button id="btnPDF" class="btn-pdf">Generar PDF (Fumigación + Calidad)</button>
+<script type="module">
+  import { generarPDF } from './modules/pdf.js';
+  document.getElementById("btnPDF").addEventListener("click", generarPDF);
+</script>

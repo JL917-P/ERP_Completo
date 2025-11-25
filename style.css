@@ -1,0 +1,14 @@
+/* Basic A4 + grid styles */
+body { font-family: Arial, sans-serif; background:#f3f4f6; margin:0; }
+.a4 {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 20mm;
+  margin: auto;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+table { width:100%; border-collapse: collapse; font-size:12px; }
+table, th, td { border:1px solid #000; }
+th { background:#e5e7eb; }
+.add-row-btn { margin:10px 0; padding:8px 12px; background:#3b82f6; color:white; border:none; border-radius:6px; cursor:pointer; }
