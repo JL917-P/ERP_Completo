@@ -197,3 +197,23 @@
           store.delete(id);
           tx.oncomplete = () => cargarAlmacenes($('alm-buscar').value);
         }
+      } 
+      else if (accion === 'insertar'){
+        insertarAlmacenEnHojas(a);
+      }
+    };
+  };
+
+  function insertarAlmacenEnHojas(a){
+    const texto = `${a.nombre}\n${a.direccion || ''}\nResp.: ${a.responsable || ''}`;
+
+    const campoF = document.getElementById('campo-almacen-fumigacion');
+    const campoC = document.getElementById('campo-almacen-calidad');
+
+    if (campoF) campoF.textContent = texto;
+    if (campoC) campoC.textContent = texto;
+
+    alert('Datos del almacén preparados para las hojas. Si aún no ves campos almacén en Fumigación/Calidad, solo falta agregarlos en el HTML.');
+  }
+
+})();
