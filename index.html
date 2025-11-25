@@ -4,10 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ERP Fumigación y Calidad – Induamerica</title>
+
+<!-- Estilos -->
 <link rel="stylesheet" href="style.css">
+
+<!-- Script base (navegación) -->
 <script defer src="app.js"></script>
+
+<!-- Loader de módulos dinámicos -->
+<script defer src="modules_loader.js"></script>
+
 </head>
 <body>
+
+<!-- BARRA DE NAVEGACIÓN -->
 <nav class="navbar">
     <button class="nav-btn" data-section="fumigacion">Fumigación</button>
     <button class="nav-btn" data-section="calidad">Calidad</button>
@@ -17,6 +27,7 @@
     <button class="nav-btn" data-section="historial">Historial</button>
 </nav>
 
+<!-- SECCIONES PRINCIPALES -->
 <section id="fumigacion" class="section">
     <div id="fumigacion-container">Cargando módulo…</div>
 </section>
@@ -41,11 +52,14 @@
     <div id="historial-container">Cargando módulo…</div>
 </section>
 
+<!-- PANEL DE VOZ ERP -->
 <div id="vozPanel" class="voz-panel hidden">
     <div class="voz-header">🎤 Voz ERP</div>
     <div id="vozContenido" class="voz-content">Inactivo</div>
 </div>
 
+<!-- Botón de voz -->
 <button id="btnVoz" class="voz-btn">🎤</button>
+
 </body>
 </html>
