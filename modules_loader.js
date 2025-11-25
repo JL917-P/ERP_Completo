@@ -27,9 +27,9 @@ modules.forEach(m => {
     }
 
     if (m.js) {
-        const script = document.createElement('script');
-        script.src = m.js;
-        script.defer = true;
-        document.body.appendChild(script);
+       const script = document.createElement('script');
+script.type = "module";
+script.src = m.js;
+document.body.appendChild(script);
     }
 });
